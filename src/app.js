@@ -18,3 +18,12 @@ client.events = new Collection();
 loadEvents(client, path.join(__dirname, "events"));
 
 client.login(TOKEN);
+
+//chanel massage read
+client.on("message", async message =>{
+  if (message.author.bot) return;
+  if (message.content.startsWith("haha"))
+  {
+    message.channel.send(`Lol!`)
+  }
+});
